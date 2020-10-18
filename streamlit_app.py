@@ -18,7 +18,7 @@ sd_h1 = st.sidebar.header("Training Options")
 sd_show_code = st.sidebar.checkbox("Show code", False)
 sd_include_sensitive_data = st.sidebar.checkbox('Include sensitive data', True)
 
-sd_h2 = st.sidebar.header("Hyperparameters")
+sd_h2 = st.sidebar.subheader("Hyperparameters")
 sd_train_test_split = st.sidebar.slider('Train-test split', 0.8, 0.9, 0.8, 0.05)
 sd_n_estimators = st.sidebar.slider('Number of estimators',
                                     min_value=10,
@@ -26,15 +26,18 @@ sd_n_estimators = st.sidebar.slider('Number of estimators',
                                     value=50,
                                     step=10)
 sd_max_depth = st.sidebar.slider('Max depth', 3, 10, 5)
+
+sd_h1 = st.sidebar.header("Bootstrapping Options")
 sd_n_bootstrap = st.sidebar.slider('Number of Bootstrapped Samples', 100, 1000, 200)
 sd_boostrap_replace = st.sidebar.checkbox('Bootstrap with Replacement', True)
 
 NON_SENSITIVE_COLS = ['ave_miles_driven_daily', 'debt', 'monthly_income']
 
-st.title('The Accuracy-Fairness Dilemma - A Demo')
-st.write("Machine learning models merely amplify our biases - not eliminate them.")
+st.title('The Accuracy-Fairness Dilemma')
+st.text("Machine learning models merely amplify our biases - not eliminate them.")
+st.markdown("by [Franz Louis Cesista](https://twitter.com/leloykun)")
 
-st.markdown('<hr size="3">', unsafe_allow_html=True)
+st.markdown('<hr size="4">', unsafe_allow_html=True)
 p1 = st.write("Newbie data scientists tend to put the accuracy of their models on a pedestal. Couple this with their disdain of the social sciences, and they end up automating discrimination instead of fighting it.")
 st.write("")
 p2 = st.write("I admit I was guilty of this too. \"If we just replace flawed humans with cold, calculating machines,\" I thought, \"then we can eliminate discrimination in the world.\" Seems tempting, right? But, this view is naive. Machines can be flawed too and their creators don't have to be evil for them to be so.")
@@ -199,10 +202,10 @@ st.header('Conclusion')
 st.write("")
 st.write("Machine learning models merely amplify our biases - not eliminate them.")
 st.write("")
-st.write("The Accuracy-Fairness Dilemma generalizes too: *all* models, even our mental models of the world, can be unfair if we just blindly optimize its accuracy. Yes, the past and the present sucks. But we shouldn't just give up and say, \"it's how the world works and there's nothing we can do about it.\" We *can* change the world for the better.")
+st.write("The Accuracy-Fairness Dilemma also generalizes: *all* models, even our mental models of the world, can be unfair too if we just blindly optimize their accuracy. Yes, the past and the present sucks. But we shouldn't just give up and say, \"it's how the world works and there's nothing we can do about it.\" Because still *can* change the world for the better.")
 
 st.markdown('<hr size="5">', unsafe_allow_html=True)
-st.write("In the next demo, we will explore how to make machine learning models more fair. We will also throw in privacy considerations into the mix and explore the Accuracy-Fairness-Privacy Trilemma. If you don't want to miss out, please subscribe to my newsletter below:")
+st.write("In the next demo, we will explore how to make machine learning models more fair. We will also throw in privacy considerations into the mix and explore the Accuracy-Fairness-Privacy Trilemma. If you don't want to miss out, please subscribe to my newsletter!")
 st.markdown("<iframe src=\"https://ponder.substack.com/embed\" width=\"100%\" height=\"320\" style=\"border:1px solid #EEE; background:white;\" frameborder=\"0\" scrolling=\"no\"></iframe>", unsafe_allow_html=True)
 
 
