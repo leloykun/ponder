@@ -1,11 +1,6 @@
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/leloykun/accuracy-fairness-dilemma/main)
 
-# The Accuracy-Fairness Dilemma
-Machine learning models merely amplify our biases - not eliminate them.
+# Ponder Demos
 
----
-
-[Click here](https://share.streamlit.io/leloykun/accuracy-fairness-dilemma/main) to go to the demo.
-
-
-![](github_header.PNG)
+## Demos
+1. [The Accuracy-Fairness Dilemma in Machine Learning](https://ponder.substack.com/p/the-accuracy-fairness-dilemma)
